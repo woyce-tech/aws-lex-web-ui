@@ -1,7 +1,7 @@
 {
   "region": "us-east-1",
   "cognito": {
-    "poolId": "",
+    "poolId": "us-east-1:76c7761c-bdc7-42eb-ab2c-22080ee8d359",
     "aws_cognito_region": "us-east-1",
     "region": "us-east-1"
   },
@@ -14,23 +14,23 @@
     "waitingForAgentMessageIntervalSeconds": 60
   },
   "lex": {
-    "botName": "OrderFlowers",
-    "initialText": "You can ask me for help ordering flowers. Just type \"order flowers\" or click on the mic and say it.",
+    "botName": "ssp-bot-demo",
+    "initialText": "You can ask me anything",
     "initialSpeechInstruction": "Say 'Order Flowers' to get started.",
     "initialUtterance": "",
     "region": "us-east-1",
     "retryOnLexPostTextTimeout": false,
     "retryCountPostTextTimeout": 1,
-    "v2BotId": "",
-    "v2BotAliasId": "",
-    "v2BotLocaleId": "",
+    "v2BotId": "VDNQB8DCYW",
+    "v2BotAliasId": "JKUKGLQURR",
+    "v2BotLocaleId": "en_US",
     "allowStreamingResponses": false,
     "streamingWebSocketEndpoint": "",
     "streamingDynamoDbTable": ""
   },
   "ui": {
     "parentOrigin": "http://localhost:8000",
-    "toolbarTitle": "Order Flowers",
+    "toolbarTitle": "Welcome",
     "toolbarLogo": "",
     "positiveFeedbackIntent": "Thumbs up",
     "negativeFeedbackIntent": "Thumbs down",

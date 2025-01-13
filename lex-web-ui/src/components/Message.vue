@@ -603,14 +603,14 @@ export default {
 }
 
 .message-bot .message-bubble {
-  background-color: #FFEBEE; /* red-50 from material palette */
+  background-color: #ffa3a3; /* red-50 from material palette */
 }
 
 .message-agent .message-bubble {
-  background-color: #FFEBEE; /* red-50 from material palette */
+  background-color: #000b3d; /* red-50 from material palette */
 }
 .message-human .message-bubble {
-  background-color: #E8EAF6; /* indigo-50 from material palette */
+  background-color: #60faff; /* indigo-50 from material palette */
 }
 
 .message-feedback .message-bubble {
@@ -666,6 +666,7 @@ export default {
 
 .feedback-icons-negative:hover{
   color: red;
+
 }
 
 .copy-icon {

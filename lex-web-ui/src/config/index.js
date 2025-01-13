@@ -178,7 +178,7 @@ const configDefault = {
     // text shown when you hover over the minimized bot button
     minButtonContent: '',
 
-    toolbarColor: 'red',
+    toolbarColor: 'green',
 
     // chat window title
     toolbarTitle: 'Order Flowers',
