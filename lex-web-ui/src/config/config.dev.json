@@ -1,39 +1,46 @@
 {
   "region": "us-east-1",
   "cognito": {
-    "poolId": "",
-    "appUserPoolClientId": "",
-    "appUserPoolName": "",
-    "appDomainName": "",
+    "poolId": "us-east-1:76c7761c-bdc7-42eb-ab2c-22080ee8d359",
     "aws_cognito_region": "us-east-1",
     "region": "us-east-1"
   },
+  "connect": {
+    "contactFlowId" : "",
+    "instanceId" : "",
+    "apiGatewayEndpoint" : "",
+    "promptForNameMessage": "Before starting a live chat, please tell me your name?",
+    "waitingForAgentMessage": "Thanks for waiting. An agent will be with you when available.",
+    "waitingForAgentMessageIntervalSeconds": 60
+  },
   "lex": {
-    "v2BotId": "",
-    "v2BotAliasId": "",
-    "v2BotLocaleId": "",
-    "botName": "",
-    "botAlias": "$LATEST",
-    "initialText": "Type 'Buy Flowers' to get started.",
-    "initialSpeechInstruction": "Say 'Buy Flowers' to get started.",
+    "botName": "ssp-bot-demo",
+    "initialText": "You can ask me anything",
+    "initialSpeechInstruction": "Say 'Order Flowers' to get started.",
     "initialUtterance": "",
-    "reInitSessionAttributesOnRestart": false,
     "region": "us-east-1",
-    "retryOnLexPostTextTimeout": "false",
-    "retryCountPostTextTimeout": "1"
+    "retryOnLexPostTextTimeout": false,
+    "retryCountPostTextTimeout": 1,
+    "v2BotId": "VDNQB8DCYW",
+    "v2BotAliasId": "JKUKGLQURR",
+    "v2BotLocaleId": "en_US",
+    "allowStreamingResponses": false,
+    "streamingWebSocketEndpoint": "",
+    "streamingDynamoDbTable": ""
   },
   "ui": {
-    "parentOrigin": "",
-    "toolbarTitle": "Order Flowers",
+    "parentOrigin": "http://localhost:8000",
+    "toolbarTitle": "Welcome",
     "toolbarLogo": "",
     "positiveFeedbackIntent": "Thumbs up",
     "negativeFeedbackIntent": "Thumbs down",
     "helpIntent": "Help",
+    "helpContent": {},
     "enableLogin": false,
+    "enableSFX": false,
     "forceLogin": false,
     "AllowSuperDangerousHTMLInMessage": true,
     "shouldDisplayResponseCardTitle": false,
-    "saveHistory": false,
     "minButtonContent": "",
     "hideInputFieldsForButtonResponse": false,
     "pushInitialTextOnRestart": false,
@@ -42,18 +49,12 @@
     "backButton": false,
     "messageMenu": true,
     "hideButtonMessageBubble": false,
-    "enableLiveChat": false
-  },
-  "connect": {
-    "contactFlowId" : "",
-    "instanceId" : "",
-    "apiGatewayEndpoint" : "",
-    "waitingForAgentMessage": "Thanks for waiting. An agent will be with you when available.",
-    "waitingForAgentMessageIntervalSeconds": 60,
-    "agentJoinedMessage": "{Agent} has joined.",
-    "agentLeftMessage": "{Agent} has left.", 
-    "chatEndedMessage": "Chat ended.",
-    "attachChatTranscript": true
+    "saveHistory": false,
+    "enableLiveChat": false,
+    "toolbarStartLiveChatLabel": "Start Live Chat",
+    "toolbarEndLiveChatLabel": "End Live Chat",
+    "toolbarStartLiveChatIcon": "people_alt",
+    "toolbarEndLiveChatIcon": "call_end"
   },
   "polly": {
     "voiceId": "Salli"
