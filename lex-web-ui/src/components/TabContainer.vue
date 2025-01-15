@@ -82,13 +82,12 @@ export default {
 <style scoped>
 /* Styling for Tabs */
 .tab-container {
+  /* display: flex;
+  flex-direction: column;
+  align-items: center; */
   position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  bottom: 10px;
   width: 100%;
-  height: 100%;
 }
 
 .tabs {
@@ -96,8 +95,7 @@ export default {
   background-color: #4caf50;
   border-radius: 20px;
   padding: 5px;
-  position: absolute;
-  bottom: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
   width: 100%;
 }
 

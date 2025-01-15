@@ -6,7 +6,7 @@
       <div class="chat-header">
         <div class="header-content">
           <img
-            src="https://pcointelligence.com/wp-content/uploads/2022/01/header-image-350x100-1.png"
+            src="https://pcointelligence.com/wp-content/uploads/2024/12/header-image-350x100-green.png"
             width="100"
             height="60"
             alt="EnSec Logo"
@@ -27,6 +27,7 @@
         <!-- System Message -->
 
         <v-main v-if="!isUiMinimized">
+          
           <message-list v-if="!isUiMinimized" />
         </v-main>
       </div>
@@ -639,10 +640,12 @@ export default {
 }
 
 .message-area {
-  min-height: 60vh;
+  max-height: 60vh;
+  height: 60vh;
   overflow-y: scroll;
   /* overflow-x: hidden; */
   padding: 16px;
+  margin-bottom: 70px;
 }
 
 .system-message {
