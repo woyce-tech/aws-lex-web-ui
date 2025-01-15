@@ -56,7 +56,7 @@ const configDefault = {
   cognito: {
     // Cognito pool id used to obtain credentials
     // e.g. poolId: 'us-east-1:deadbeef-cac0-babe-abcd-abcdef01234',
-    poolId: 'us-east-1:76c7761c-bdc7-42eb-ab2c-22080ee8d359',
+    poolId: '',
   },
   connect: {
     // The Connect contact flow id - user configured via CF template
@@ -81,12 +81,12 @@ const configDefault = {
   },
   lex: {
     // Lex V2 fields
-    v2BotId: 'VDNQB8DCYW',
-    v2BotAliasId: 'JKUKGLQURR',
-    v2BotLocaleId: 'en_US',
+    v2BotId: '',
+    v2BotAliasId: '',
+    v2BotLocaleId: '',
 
     // Lex bot name
-    botName: 'ssp-bot-demo',
+    botName: 'WebUiOrderFlowers',
 
     // Lex bot alias/version
     botAlias: '$LATEST',
@@ -178,7 +178,7 @@ const configDefault = {
     // text shown when you hover over the minimized bot button
     minButtonContent: '',
 
-    toolbarColor: 'green',
+    toolbarColor: 'red',
 
     // chat window title
     toolbarTitle: 'Order Flowers',

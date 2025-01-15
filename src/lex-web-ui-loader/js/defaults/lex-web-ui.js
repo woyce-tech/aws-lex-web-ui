@@ -19,16 +19,16 @@
  */
 
 export const configBase = {
-  region: '',
-  lex: { botName: '' },
-  cognito: { poolId: '' },
-  ui: { parentOrigin: '' },
+  region: 'us-east-1',
+  lex: { botName: 'ssp-bot-demo' },
+  cognito: { poolId: 'us-east-1:76c7761c-bdc7-42eb-ab2c-22080ee8d359' },
+  ui: { parentOrigin: window.location.origin },
   polly: {},
   connect: {},
   recorder: {},
   iframe: {
-    iframeOrigin: '',
-    iframeSrcPath: '',
+    iframeOrigin: window.location.origin,
+    iframeSrcPath: window.location.origin,
   },
 };
 

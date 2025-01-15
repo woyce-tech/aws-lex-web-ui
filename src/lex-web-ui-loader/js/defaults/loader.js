@@ -32,7 +32,7 @@ export const options = {
 
   // URL to download config JSON file
   // uses baseUrl if set as a relative URL (not starting with http)
-  configUrl: './lex-web-ui-loader-config.json',
+  configUrl: './default-lex-web-ui-loader-config.json',
 
   // controls whether the local config should be ignored when running
   // embedded (e.g. iframe) in which case the parent page will pass the config

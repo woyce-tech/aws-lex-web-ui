@@ -1993,22 +1993,22 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 const configBase = {
-  region: '',
+  region: 'us-east-1',
   lex: {
-    botName: ''
+    botName: 'ssp-bot-demo'
   },
   cognito: {
-    poolId: ''
+    poolId: 'us-east-1:76c7761c-bdc7-42eb-ab2c-22080ee8d359'
   },
   ui: {
-    parentOrigin: ''
+    parentOrigin: window.location.origin
   },
   polly: {},
   connect: {},
   recorder: {},
   iframe: {
-    iframeOrigin: '',
-    iframeSrcPath: ''
+    iframeOrigin: window.location.origin,
+    iframeSrcPath: window.location.origin
   }
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (configBase);
@@ -2060,7 +2060,7 @@ const options = {
   configEventTimeoutInMs: 10000,
   // URL to download config JSON file
   // uses baseUrl if set as a relative URL (not starting with http)
-  configUrl: './lex-web-ui-loader-config.json',
+  configUrl: './default-lex-web-ui-loader-config.json',
   // controls whether the local config should be ignored when running
   // embedded (e.g. iframe) in which case the parent page will pass the config
   // Only the parentOrigin config field is kept when set to true
