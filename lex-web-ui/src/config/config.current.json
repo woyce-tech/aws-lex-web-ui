@@ -16,7 +16,7 @@
     "lex": {
       "botName": "ssp-bot-demo",
       "initialText": "You can ask me anything",
-      "initialSpeechInstruction": "Say 'Order Flowers' to get started.",
+      "initialSpeechInstruction": "Say 'PCO Intelligence' to get started.",
       "initialUtterance": "",
       "region": "us-east-1",
       "retryOnLexPostTextTimeout": false,
@@ -29,7 +29,7 @@
       "streamingDynamoDbTable": ""
     },
     "ui": {
-      "parentOrigin": "http://localhost:8000",
+      "parentOrigin": "https://dwnjd0qi3xz2k.cloudfront.net",
       "toolbarTitle": "Welcome",
       "toolbarLogo": "",
       "positiveFeedbackIntent": "Thumbs up",
