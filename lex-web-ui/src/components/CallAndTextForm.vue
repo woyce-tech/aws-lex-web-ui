@@ -270,4 +270,32 @@ textarea[required]::placeholder::after {
   color: #dc3545;
   margin-left: 2px;
 }
+
+/* take most space on small resolutions (smart phones) */
+@media only screen
+and (min-width: 241px)
+and (max-width: 480px) {
+  .form-container {
+    padding: 8px;
+    max-height: 85vh;
+    overflow-y: auto;
+  }
+
+  .form-header {
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+  }
+  
+  .form-header h2 { 
+    margin: 0 0 4px;
+  }
+
+  .form-row {
+    gap: 10px;
+  }
+
+  .form-group {
+    margin-bottom: 8px;
+  }
+}
 </style>
