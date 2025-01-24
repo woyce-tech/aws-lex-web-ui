@@ -282,4 +282,55 @@ textarea[required]::placeholder::after {
   color: #dc3545;
   margin-left: 2px;
 }
+/* @media only screen and (min-width: 350px) and (max-width: 450px) {
+  .form-container {
+    height: 350px;
+    overflow-y: auto;
+    padding: 15px;
+    margin: 10px;
+  }
+
+  .form-header h2 {
+    font-size: 1.25rem;
+  }
+
+  .form-header p {
+    font-size: 0.9rem;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .form-group {
+    margin-bottom: 10px;
+  }
+
+  input,
+  textarea {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .form-footer {
+    margin-top: 15px;
+  }
+
+  .disclaimer {
+    font-size: 10px;
+  }
+
+  .button-group {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .btn-cancel,
+  .btn-send {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+  }
+} */
 </style>
