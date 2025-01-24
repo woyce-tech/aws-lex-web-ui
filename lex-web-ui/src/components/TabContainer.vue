@@ -159,4 +159,13 @@ export default {
   font-size: 16px;
   text-transform: capitalize;
 }
+
+/* take most space on small resolutions (smart phones) */
+@media only screen
+and (min-width: 241px)
+and (max-width: 480px) {
+  .tabs {
+    height: 40px;
+  }
+}
 </style>

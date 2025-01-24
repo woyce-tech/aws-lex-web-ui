@@ -755,4 +755,27 @@ input {
   margin-bottom: 4px;
   font-size: 20px;
 }
+
+/* take most space on small resolutions (smart phones) */
+@media only screen
+and (min-width: 241px)
+and (max-width: 480px) {
+  .input-container {
+    margin: 10px 10px 50px;
+  }
+
+  .image-container {
+    height: 40px;
+    width: 150px;
+  }
+
+  .chat-header {
+    padding: 10px 20px;
+  }
+
+  .connect-button {
+    font-size: 1rem;
+    padding-top: 10px;
+  }
+}
 </style>
