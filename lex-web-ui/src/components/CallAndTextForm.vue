@@ -270,6 +270,12 @@ textarea[required]::placeholder::after {
   color: #dc3545;
   margin-left: 2px;
 }
+@media screen and (max-height: 720px) {
+  .form-container {
+    height: 76vh;
+    overflow-y: auto;
+  }
+}
 /* @media only screen and (min-width: 350px) and (max-width: 450px) {
   .form-container {
     height: 350px;
