@@ -162,4 +162,11 @@ export default {
   font-size: 16px;
   text-transform: capitalize;
 }
+@media only screen
+  and (min-width: 150px)
+  and (max-width: 350px) {
+    .tab-item {
+      flex-direction: column;
+      }  
+  }
 </style>
