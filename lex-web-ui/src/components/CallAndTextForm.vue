@@ -5,64 +5,64 @@
       <p>Send any details you'd like, and we'll get back to you shortly</p>
       <button class="close-button" @click="closeForm">&times;</button>
     </div>
-
-    <form @submit.prevent="handleSubmit">
-      <div class="form-row">
-        <div class="form-group half">
+    <div class="form-content">
+      <form @submit.prevent="handleSubmit">
+        <div class="form-row">
+          <div class="form-group half">
+            <input
+              v-model="formData.firstName"
+              type="text"
+              placeholder="First Name"
+              :class="{ error: errors.firstName }"
+            />
+          </div>
+          <div class="form-group half">
+            <input
+              v-model="formData.lastName"
+              type="text"
+              placeholder="Last Name"
+              :class="{ error: errors.lastName }"
+            />
+          </div>
+        </div>
+  
+  
+        <div class="form-group">
           <input
-            v-model="formData.firstName"
-            type="text"
-            placeholder="First Name"
-            :class="{ error: errors.firstName }"
+            v-model="formData.phone"
+            type="tel"
+            placeholder="Cell Phone *"
+            :class="{ error: errors.phone }"
+            required
           />
         </div>
-        <div class="form-group half">
-          <input
-            v-model="formData.lastName"
-            type="text"
-            placeholder="Last Name"
-            :class="{ error: errors.lastName }"
-          />
+  
+        <div class="form-group">
+          <textarea
+            v-model="formData.message"
+            placeholder="Message *"
+            rows="4"
+            :class="{ error: errors.message }"
+            required
+          ></textarea>
         </div>
-      </div>
-
-
-      <div class="form-group">
-        <input
-          v-model="formData.phone"
-          type="tel"
-          placeholder="Cell Phone *"
-          :class="{ error: errors.phone }"
-          required
-        />
-      </div>
-
-      <div class="form-group">
-        <textarea
-          v-model="formData.message"
-          placeholder="Message *"
-          rows="4"
-          :class="{ error: errors.message }"
-          required
-        ></textarea>
-      </div>
-
-      <div class="form-footer">
         <p class="disclaimer">
           By submitting, you agree to be contacted about your request & other
           information using automated technology. Message frequency varies. Msg
           & data rates may apply. Text STOP to cancel.
           <a href="#" class="policy-link">Acceptable Use Policy</a>
         </p>
-
-        <div class="button-group">
-          <button type="button" class="btn-cancel" @click="closeForm">
-            Cancel
-          </button>
-          <button type="submit" class="btn-send">Send</button>
+      </form>
+    </div>
+    <div class="custom-divider"></div>
+    <div class="form-footer">
+          <div class="button-group">
+            <button type="button" class="btn-cancel" @click="closeForm">
+              Cancel
+            </button>
+            <button type="submit" class="btn-send">Send</button>
+          </div>
         </div>
-      </div>
-    </form>
   </div>
 </template>
 
@@ -148,18 +148,20 @@ export default {
 
 <style scoped>
 .form-container {
-  padding: 20px;
-  border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  margin: 0 auto;
-  position: relative;
   margin-bottom: 10px;
-  background-color: #f9f9f9;
+  background-color: #fff;
+  border-radius: 1rem;
+  height: 90cqh;
+  overflow-y: auto;
 }
 
 .form-header {
   position: relative;
-  margin-bottom: 20px;
+  background-color: #f8f8fd;
+  padding: 20px;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
 }
 
 .form-header h2 {
@@ -174,16 +176,28 @@ export default {
   text-align: start;
 }
 
+.custom-divider {
+  height: 1px;
+  background-color: #ccc;
+  width: 100%;
+}
+
 .close-button {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 10px;
+  right: 24px;
   background: none;
   border: none;
-  font-size: 24px;
+  font-size: 28px;
   cursor: pointer;
   padding: 0;
   color: #666;
+}
+
+.form-content {
+  /* max-height: 59vh; */
+  /* overflow-y: auto; */
+  padding: 20px;
 }
 
 .form-group {
@@ -200,8 +214,7 @@ export default {
   flex: 1;
 }
 
-input,
-textarea {
+input, textarea {
   width: 100%;
   padding: 10px;
   border: 1px solid #ddd;
@@ -209,8 +222,7 @@ textarea {
   font-size: 14px;
 }
 
-input.error,
-textarea.error {
+input.error, textarea.error {
   border-color: #dc3545;
 }
 
@@ -219,7 +231,7 @@ textarea {
 }
 
 .form-footer {
-  margin-top: 20px;
+  padding: 20px;
 }
 
 .disclaimer {
@@ -237,15 +249,16 @@ textarea {
   display: flex;
   gap: 10px;
   justify-content: flex-end;
+  width: 100%;
 }
 
-.btn-cancel,
-.btn-send {
+.btn-cancel, .btn-send {
   padding: 10px 20px;
   border-radius: 4px;
   border: none;
   cursor: pointer;
   font-weight: 500;
+  width: 100%;
 }
 
 .btn-cancel {
@@ -266,8 +279,42 @@ textarea[required]::placeholder {
 
 input[required]::placeholder::after,
 textarea[required]::placeholder::after {
-  content: "*";
+  content: '*';
   color: #dc3545;
   margin-left: 2px;
 }
+/* Scrollbar width */
+.form-content::-webkit-scrollbar {
+  width: 8px; /* Adjust scrollbar width */
+}
+
+/* Scrollbar track (background) */
+.form-content::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Light gray background */
+  border-radius: 10px;
+}
+
+/* Scrollbar handle (thumb) */
+.form-content::-webkit-scrollbar-thumb {
+  background: #c0c0c0; /* Dark gray color */
+  border-radius: 10px;
+}
+/* @media screen and (min-height: 0px) and (max-height: 460px) {
+    .form-container {
+      height: 82vh !important;
+      overflow-y: auto;
+    }
+  }
+@media screen and (min-height: 460px) and (max-height: 630px) {
+  .form-container {
+    height: 84vh !important;
+    overflow-y: auto;
+  }
+}
+@media screen and (max-height: 720px) {
+  .form-container {
+    height: 89vh;
+    overflow-y: auto;
+  }
+} */
 </style>
