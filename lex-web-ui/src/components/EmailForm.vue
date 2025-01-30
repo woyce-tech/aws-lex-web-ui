@@ -71,15 +71,16 @@
             Message frequency varies. Msg & data rates may apply. Text STOP to cancel.
             <a href="#" class="policy-link">Acceptable Use Policy</a>
         </p>
+        <div class="custom-divider"></div>
+        <div class="form-footer">
+              <div class="button-group">
+                <button type="button" class="btn-cancel" @click="closeForm">Cancel</button>
+                <button type="submit" class="btn-send">Send</button>
+              </div>
+            </div>
       </form>
     </div>
-    <div class="custom-divider"></div>
-    <div class="form-footer">
-          <div class="button-group">
-            <button type="button" class="btn-cancel" @click="closeForm">Cancel</button>
-            <button type="submit" class="btn-send">Send</button>
-          </div>
-        </div>
+  
   </div>
 </template>
 
@@ -143,6 +144,7 @@ export default {
       return isValid
     },
     handleSubmit() {
+      console.log('handleSubmitCalled', this.validateForm())
       if (this.validateForm()) {
         // Handle form submission
         const message = {

@@ -52,9 +52,7 @@
           & data rates may apply. Text STOP to cancel.
           <a href="#" class="policy-link">Acceptable Use Policy</a>
         </p>
-      </form>
-    </div>
-    <div class="custom-divider"></div>
+        <div class="custom-divider"></div>
     <div class="form-footer">
           <div class="button-group">
             <button type="button" class="btn-cancel" @click="closeForm">
@@ -63,6 +61,9 @@
             <button type="submit" class="btn-send">Send</button>
           </div>
         </div>
+      </form>
+    </div>
+   
   </div>
 </template>
 
