@@ -2,6 +2,7 @@
   !*** css ../../../node_modules/css-loader/dist/cjs.js!../css/lex-web-ui-fullpage.css ***!
   \***************************************************************************************/
 #lex-web-ui-fullpage {
+  container-type: inline-size !important;
   height: 100%;
   width: 100%;
 }
@@ -16,7 +17,7 @@
   margin-left: 2px;
   margin-right: 1vw;
   margin-top: 2px;
-  height: 70vh; /* dynamically changed on iframe maximize/minimize */
+  height: 75vh; /* dynamically changed on iframe maximize/minimize */
   position: fixed;
   right: 0;
   z-index: 2147483637; /* max z-index (2147483647) - 10 */
@@ -95,7 +96,7 @@ and (max-width: 960px) {
   }
 }
 
-@media screen and (max-height: 720px) {
+/* @media screen and (max-height: 720px) {
   .lex-web-ui-iframe {
     height: 92vh;
   }
@@ -111,8 +112,98 @@ and (max-width: 960px) {
   .lex-web-ui-iframe {
     height: 70vh;
   }
+} */
+@media screen and (max-height: 720px) {
+  .lex-web-ui-iframe {
+    height: 100vh;
+    overflow-y: auto;
+  }
 }
 
+@media screen and (min-height: 721px) and (max-height: 820px) {
+  .lex-web-ui-iframe {
+    height: 88vh;
+  }
+}
+
+@media screen and (min-height: 821px) and (max-height: 871px) {
+  .lex-web-ui-iframe {
+    height: 80vh;
+  }
+}
+
+@media screen and (min-height: 871px) and (max-height: 1079px) {
+  .lex-web-ui-iframe {
+    height: 70vh;
+  }
+}
+
+@media only screen
+  and (min-width: 150px)
+  and (max-width: 382px) {
+    .lex-web-ui-iframe--show {
+      display: flex;
+      min-width: 300px !important;
+      max-width: 300px !important;
+    }    
+  }
+
+  @media only screen
+  and (min-width: 150px)
+  and (max-width: 350px) {
+    .tab-item {
+      flex-direction: column;
+    }  
+    .tab-icon {
+      margin-right: 0px;
+    }
+    .form-container {
+      height: 85cqh !important;
+    }
+  }
+
+  /* @media only screen
+  and (min-width: 150px)
+  and (max-width: 350px) {
+  .form-container {
+    height: 84vh !important;
+    overflow-y: auto;
+  }
+  .form-header h2 {
+    font-size: 1.25rem;
+  }
+  .form-header p {
+    font-size: 0.9rem;
+  }
+  .form-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .form-group {
+    margin-bottom: 10px;
+  }
+  input,
+  textarea {
+    font-size: 14px;
+    padding: 8px;
+  }
+  .form-footer {
+    margin-top: 15px;
+  }
+  .disclaimer {
+    font-size: 10px;
+  }
+  .button-group {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .btn-cancel,
+  .btn-send {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+  }
+} */
 .lex-web-ui-iframe iframe {
   overflow: hidden;
   width: 100%;
