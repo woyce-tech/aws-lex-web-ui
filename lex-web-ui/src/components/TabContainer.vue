@@ -94,6 +94,7 @@ export default {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+  height: 100cqh !important;
 }
 
 .lex-web-ui-iframe {
