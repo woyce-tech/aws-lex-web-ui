@@ -100,10 +100,13 @@ export default {
     if (context.state.messages &&
       context.state.messages.length === 0 &&
       context.state.config.lex.initialText.length > 0) {
-        context.commit('pushMessage', {
-          type: 'bot',
-          text: context.state.config.lex.initialText,
+        context.state.config.lex.initialText.forEach(text => {
+          context.commit('pushMessage', {
+            type: 'bot',
+            text: text,
+          });
         });
+        
     }
   },
   initLexClient(context, payload) {

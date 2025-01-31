@@ -28,7 +28,7 @@
     "v2BotLocaleId": "en_US",
     "botName": "LZIKP1FQS6",
     "botAlias": "$LATEST",
-    "initialText": "Hi! Thanks for reaching out to Demo Pest Control! How can we help you? I'm here to help answer any questions you have. If you want to chat with a live agent simply type `agent`",
+     "initialText": ["Hi! Thanks for reaching out to Demo Pest Control! 🐜🦟 How can we assist you today?", "I can help answer questions about our services, pricing, and scheduling an appointment. if you’d like to speak with a live agent, just type agent."],
     "initialSpeechInstruction": "Hi! Thanks for reaching out to Demo Pest Control! How can we help you? I'm here to help answer any questions you have. If you want to chat with a live agent simply type `agent`",
     "initialUtterance": "",
     "reInitSessionAttributesOnRestart": false,
